@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show/Hide Image</title>
+</head>
+<body>
+
+  <img id="myImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFU7U2h0umyF0P6E_yhTX45sGgPEQAbGaJ4g&s" 
+  alt="Sample Image" style="display:none;">
+  <button id="showBtn">Show Image</button>
+  <button id="hideBtn" style="display:none;">Hide Image</button>
+
+  <script>
+    const img = document.getElementById("myImage");
+    const showBtn = document.getElementById("showBtn");
+    const hideBtn = document.getElementById("hideBtn");
+
+  
+    showBtn.addEventListener("click", function() {
+      img.style.display= " block";      // show the image
+      showBtn.style.display = "none";   // hide "Show Image" button
+      hideBtn.style.display = "inline"; // show "Hide Image" button
+    });
+
+    // 3️⃣ Hide Image button click (optional for completeness)
+    hideBtn.addEventListener("click", function() {
+      img.style.display = "none";        // hide the image
+      showBtn.style.display = "inline";  // show "Show Image" button
+      hideBtn.style.display = "none";    // hide "Hide Image" button
+    });
+  </script>
+</body>
+</html>
