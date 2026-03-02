@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show/Hide Image</title>
+  <style>
+   
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      border: none;
+      background-color: #fffb00;
+      color: rgb(3, 3, 3);
+      font-size: 16px;
+    
+    }
+    button:hover {
+      background-color: #b99ad3cc;
+    }
+    .div {
+        background-color: rgb(243, 219, 82);
+        padding: 200px;
+        margin: 40px;
+        text-align: center;
+    
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="div">
+    <img id="myImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvONapxxHO8eZyDxfhYP9OJ9XOKOYtPC0EMg&s" 
+    alt="Sample Image" style="display:none";>
+
+    <br>
+
+    <button id="showBtn" onclick="showImage()">Show Image</button>
+    <button id="hideBtn" onclick="hideImage()" style="display:none;">Hide Image</button>
+  </div>
+
+  <script>
+    // Get elements
+    const img = document.getElementById("myImage");
+    const showBtn = document.getElementById("showBtn");
+    const hideBtn = document.getElementById("hideBtn");
+
+    function showImage() {
+      img.style.display = "block";     // show the image
+      showBtn.style.display = "none";  // hide Show button
+      hideBtn.style.display = "inline"; // show Hide button
+    }
+
+    function hideImage() {
+      img.style.display = "none";       // hide the image
+      showBtn.style.display = "inline"; // show Show button
+      hideBtn.style.display = "none";   // hide Hide button
+    }
+  </script>
+</body>
+</html>
